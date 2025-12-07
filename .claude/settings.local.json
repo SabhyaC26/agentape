@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(uv venv:*)",
+      "Bash(source:*)",
+      "Bash(uv pip install:*)",
+      "Bash(python3 -m uv venv:*)",
+      "Bash(python3 -m uv pip install:*)",
+      "Bash(/Users/sabhyachhabria/Library/Python/3.9/bin/uv pip install:*)",
+      "Bash(pytest:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
