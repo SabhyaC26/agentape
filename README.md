@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="agentapelogo.png" alt="agentape logo" width="300">
+  <img src="agentapelogo.png" alt="agentape logo" width="300" style="border-radius: 20px">
 </p>
 
 <p align="center">
@@ -17,6 +17,22 @@
 <p align="center">
   <b>Record/replay testing for LLM agents.</b>
 </p>
+
+## Why Agentape?
+
+Depending on live LLM APIs for testing is slow, expensive, and flaky. **Agentape** solves this by recording your interactions once and replaying them instantly.
+
+- 💸 **Save Money**: Eliminate API costs during development and CI/CD.
+- ⚡ **Instant Feedback**: Tests run in milliseconds, not seconds.
+- 🛡️ **Determinism**: Flaky LLM outputs won't break your logic tests.
+- 🔒 **Offline Capable**: Code on a plane or train without internet access.
+
+## Use Cases
+
+- **Regression Testing**: Ensure your tool usage and parsing logic works without hitting real endpoints.
+- **CI/CD Pipelines**: Run unittests on every commit without worrying about rate limits or bills.
+- **Showcase Demos**: commit "golden path" tapes to ensure your examples always work for new users.
+- **Debugging**: Capture a specific conversation state and replay it reliably to fix downstream bugs.
 
 ## Installation
 
