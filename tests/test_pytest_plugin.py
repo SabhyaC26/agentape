@@ -2,9 +2,7 @@
 
 import os
 import tempfile
-from unittest.mock import MagicMock, patch
-
-import pytest
+from unittest.mock import patch
 
 from agentape.pytest_plugin import get_tape_mode, use_tape
 
@@ -41,7 +39,6 @@ class TestUseTapeDecorator:
 
     def test_decorator_formats_path_with_test_name(self):
         """Test that path is formatted with test name."""
-        calls = []
 
         @use_tape("tapes/{test_name}.yaml")
         def test_example():
@@ -53,7 +50,7 @@ class TestUseTapeDecorator:
     def test_decorator_in_record_mode(self):
         """Test decorator behavior in record mode."""
         with tempfile.TemporaryDirectory() as tmpdir:
-            path = os.path.join(tmpdir, "tapes", "test_func.yaml")
+            os.path.join(tmpdir, "tapes", "test_func.yaml")
 
             @use_tape(os.path.join(tmpdir, "tapes", "{test_name}.yaml"))
             def test_func():

@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
+from collections.abc import Generator
 from contextlib import contextmanager
-from typing import TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING
 
 from agentape.core.context import (
     TapeContext,

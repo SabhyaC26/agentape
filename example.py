@@ -2,9 +2,11 @@
 """Example demonstrating agentape record/replay functionality."""
 
 import os
-import agentape
-from openai import OpenAI
+
 from dotenv import load_dotenv
+from openai import OpenAI
+
+import agentape
 
 # Load environment variables from .env file
 load_dotenv()
@@ -52,9 +54,9 @@ def demo_basic_usage():
     print("✓ No API call made - response came from tape!")
 
     # Verify they match
-    assert (
-        recorded_content == replayed_content
-    ), "Recorded and replayed responses should match"
+    assert recorded_content == replayed_content, (
+        "Recorded and replayed responses should match"
+    )
     print("\n✓ Recorded and replayed responses match perfectly\n")
 
 

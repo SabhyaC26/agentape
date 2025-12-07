@@ -32,6 +32,14 @@ Thank you for your interest in contributing to agentape! We welcome contribution
 
    This installs agentape in editable mode with all development dependencies.
 
+4. **Install the pre-commit hook** (optional but recommended):
+   ```bash
+   cp scripts/pre-commit.sh .git/hooks/pre-commit
+   chmod +x .git/hooks/pre-commit
+   ```
+
+   This will automatically run linting checks before each commit.
+
 ## Development Workflow
 
 > **Note**: We use `uv` for fast dependency management. It's significantly faster than pip and handles virtual environments seamlessly.
@@ -54,9 +62,19 @@ pytest tests/ --cov=agentape --cov-report=html
 
 We use several tools to maintain code quality:
 
+**Quick lint (recommended)**:
+```bash
+./scripts/lint.sh
+```
+
 **Linting with Ruff**:
 ```bash
 ruff check agentape/ tests/
+```
+
+**Auto-fix linting issues**:
+```bash
+ruff check --fix agentape/ tests/
 ```
 
 **Type checking with mypy**:

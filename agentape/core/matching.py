@@ -59,6 +59,5 @@ def get_match_fn(mode: MatchMode) -> callable:
     """Get the matching function for a given mode."""
     if mode == MatchMode.EXACT:
         return match_exact
-    else:
-        raise ValueError(f"Unknown match mode: {mode}")
-
+    msg = f"Unknown match mode: {mode}"
+    raise ValueError(msg)

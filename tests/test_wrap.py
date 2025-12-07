@@ -19,7 +19,7 @@ class TestWrap:
 
         with patch("agentape.clients.openai_client.WrappedOpenAIClient") as MockWrapped:
             MockWrapped.return_value = MagicMock()
-            wrapped = agentape.wrap(mock_client)
+            agentape.wrap(mock_client)
             MockWrapped.assert_called_once_with(mock_client)
 
     def test_wrap_unsupported_client(self):

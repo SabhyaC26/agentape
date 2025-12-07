@@ -55,7 +55,7 @@ class Tape:
         # Set provider lazily on first interaction
         if self.provider is None and provider is not None:
             self.provider = provider
-        
+
         interaction = {
             "id": len(self.interactions) + 1,
             "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -77,7 +77,7 @@ class Tape:
         # Set provider lazily on first interaction
         if self.provider is None and provider is not None:
             self.provider = provider
-        
+
         serialized_chunks = []
         for chunk in chunks:
             if hasattr(chunk, "model_dump"):
@@ -113,9 +113,8 @@ class Tape:
             if match_fn(request, recorded_request):
                 return interaction.get("response")
 
-        raise NoMatchingInteractionError(
-            f"No matching interaction found for request: {request}"
-        )
+        msg = f"No matching interaction found for request: {request}"
+        raise NoMatchingInteractionError(msg)
 
     def match_and_return_chunks(
         self,
@@ -133,9 +132,8 @@ class Tape:
             if match_fn(request, recorded_request):
                 return interaction.get("streaming_chunks", [])
 
-        raise NoMatchingInteractionError(
-            f"No matching streaming interaction found for request: {request}"
-        )
+        msg = f"No matching streaming interaction found for request: {request}"
+        raise NoMatchingInteractionError(msg)
 
     def reset_replay(self) -> None:
         """Reset the replay index to the beginning."""

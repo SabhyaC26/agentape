@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import time
-from typing import TYPE_CHECKING, Any, Generator, Iterator
+from collections.abc import Generator, Iterator
+from typing import TYPE_CHECKING, Any
 
 from agentape.clients.base import BaseWrappedClient
 
@@ -33,10 +34,9 @@ class WrappedCompletions:
 
         if context.mode == "record":
             return self._record_create(kwargs, is_streaming)
-        elif context.mode == "replay":
+        if context.mode == "replay":
             return self._replay_create(kwargs, is_streaming)
-        else:
-            return self._completions.create(**kwargs)
+        return self._completions.create(**kwargs)
 
     def _record_create(
         self, kwargs: dict[str, Any], is_streaming: bool
@@ -49,11 +49,12 @@ class WrappedCompletions:
 
         if is_streaming:
             return self._record_streaming(kwargs, request, start_time, context)
-        else:
-            response = self._completions.create(**kwargs)
-            latency_ms = int((time.time() - start_time) * 1000)
-            context.tape.add_interaction(request, response, latency_ms, provider=self._provider)
-            return response
+        response = self._completions.create(**kwargs)
+        latency_ms = int((time.time() - start_time) * 1000)
+        context.tape.add_interaction(
+            request, response, latency_ms, provider=self._provider
+        )
+        return response
 
     def _record_streaming(
         self,
@@ -69,7 +70,9 @@ class WrappedCompletions:
             yield chunk
 
         latency_ms = int((time.time() - start_time) * 1000)
-        context.tape.add_streaming_interaction(request, chunks, latency_ms, provider=self._provider)
+        context.tape.add_streaming_interaction(
+            request, chunks, latency_ms, provider=self._provider
+        )
 
     def _replay_create(
         self, kwargs: dict[str, Any], is_streaming: bool
@@ -80,17 +83,15 @@ class WrappedCompletions:
 
         if is_streaming:
             return self._replay_streaming(request, context)
-        else:
-            response_data = context.tape.match_and_return(request, context.match_fn)
-            return self._reconstruct_response(response_data)
+        response_data = context.tape.match_and_return(request, context.match_fn)
+        return self._reconstruct_response(response_data)
 
     def _replay_streaming(
         self, request: dict[str, Any], context: TapeContext
     ) -> Generator[dict[str, Any], None, None]:
         """Replay a streaming API call."""
         chunks = context.tape.match_and_return_chunks(request, context.match_fn)
-        for chunk in chunks:
-            yield chunk
+        yield from chunks
 
     def _build_request(self, kwargs: dict[str, Any]) -> dict[str, Any]:
         """Build a request dict from kwargs."""

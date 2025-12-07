@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import os
-from datetime import datetime
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
@@ -30,7 +28,9 @@ def save_tape(tape: Tape, path: str) -> None:
     }
 
     with open(path_obj, "w") as f:
-        yaml.dump(data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+        yaml.dump(
+            data, f, default_flow_style=False, sort_keys=False, allow_unicode=True
+        )
 
 
 def load_tape(path: str) -> dict[str, Any]:
@@ -38,22 +38,27 @@ def load_tape(path: str) -> dict[str, Any]:
     path_obj = Path(path)
 
     if not path_obj.exists():
-        raise TapeNotFoundError(f"Tape file not found: {path}")
+        msg = f"Tape file not found: {path}"
+        raise TapeNotFoundError(msg)
 
     with open(path_obj) as f:
         try:
             data = yaml.safe_load(f)
         except yaml.YAMLError as e:
-            raise TapeFormatError(f"Invalid YAML in tape file: {e}") from e
+            msg = f"Invalid YAML in tape file: {e}"
+            raise TapeFormatError(msg) from e
 
     if not isinstance(data, dict):
-        raise TapeFormatError("Tape file must contain a YAML mapping")
+        msg = "Tape file must contain a YAML mapping"
+        raise TapeFormatError(msg)
 
     if "version" not in data:
-        raise TapeFormatError("Tape file missing 'version' field")
+        msg = "Tape file missing 'version' field"
+        raise TapeFormatError(msg)
 
     if "interactions" not in data:
-        raise TapeFormatError("Tape file missing 'interactions' field")
+        msg = "Tape file missing 'interactions' field"
+        raise TapeFormatError(msg)
 
     return data
 

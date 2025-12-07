@@ -4,7 +4,6 @@ import pytest
 
 from agentape.core.matching import (
     EXACT,
-    MatchMode,
     get_match_fn,
     match_exact,
     normalize_request,

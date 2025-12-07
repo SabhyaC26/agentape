@@ -2,12 +2,10 @@
 
 import os
 import tempfile
-from unittest.mock import MagicMock, patch
 
 import pytest
 
 import agentape
-from agentape.core.context import TapeContext
 from agentape.core.recorder import record
 from agentape.core.registry import clear_registry
 from agentape.core.replayer import replay
@@ -99,9 +97,8 @@ class TestReplay:
 
     def test_replay_nonexistent_tape_raises(self):
         """Test that replaying a nonexistent tape raises error."""
-        with pytest.raises(TapeNotFoundError):
-            with replay("/nonexistent/tape.yaml"):
-                pass
+        with pytest.raises(TapeNotFoundError), replay("/nonexistent/tape.yaml"):
+            pass
 
     def test_replay_with_match_mode(self):
         """Test that replay accepts match mode."""

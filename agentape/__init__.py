@@ -79,26 +79,24 @@ def wrap(client: Any) -> Any:
         register_client(wrapped_client)
         return wrapped_client
 
-    raise TypeError(
-        f"Unsupported client type: {client_type}. "
-        "Currently supported: OpenAI. "
-    )
+    msg = f"Unsupported client type: {client_type}. Currently supported: OpenAI. "
+    raise TypeError(msg)
 
 
 __all__ = [
-    # Main API
-    "wrap",
+    # Matching modes
+    "EXACT",
+    # Exceptions
+    "AgentapeError",
+    "MatchMode",
+    "NoMatchingInteractionError",
+    "TapeFormatError",
+    "TapeNotFoundError",
+    # Version
+    "__version__",
     "record",
     "replay",
     "use_tape",
-    # Matching modes
-    "EXACT",
-    "MatchMode",
-    # Exceptions
-    "AgentapeError",
-    "TapeNotFoundError",
-    "NoMatchingInteractionError",
-    "TapeFormatError",
-    # Version
-    "__version__",
+    # Main API
+    "wrap",
 ]
