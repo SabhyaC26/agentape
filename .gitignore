@@ -27,6 +27,11 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# PyPI / Twine
+.pypirc
+*.whl
+*.tar.gz
+
 # PyInstaller
 *.manifest
 *.spec

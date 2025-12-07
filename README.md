@@ -1,6 +1,6 @@
 # agentape
 
-Record/replay testing for LLM agents. Think "VCR.py but for LLM SDKs" with semantic matching.
+Record/replay testing for LLM agents.
 
 ## Installation
 
@@ -57,4 +57,3 @@ pytest tests/ --tape-mode=off      # Pass-through, no taping
 ## License
 
 MIT
-# agentape

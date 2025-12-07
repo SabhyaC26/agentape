@@ -4,13 +4,9 @@ import pytest
 
 from agentape.core.matching import (
     EXACT,
-    FUZZY,
-    SEMANTIC,
     MatchMode,
     get_match_fn,
     match_exact,
-    match_fuzzy,
-    match_semantic,
     normalize_request,
 )
 
@@ -98,24 +94,6 @@ class TestMatchExact:
         assert match_exact(request1, request2) is True
 
 
-class TestMatchSemantic:
-    """Tests for semantic matching (Phase 2)."""
-
-    def test_raises_not_implemented(self):
-        """Test that semantic matching raises NotImplementedError."""
-        with pytest.raises(NotImplementedError):
-            match_semantic({}, {})
-
-
-class TestMatchFuzzy:
-    """Tests for fuzzy matching (Phase 2)."""
-
-    def test_raises_not_implemented(self):
-        """Test that fuzzy matching raises NotImplementedError."""
-        with pytest.raises(NotImplementedError):
-            match_fuzzy({}, {})
-
-
 class TestGetMatchFn:
     """Tests for getting match function by mode."""
 
@@ -123,16 +101,6 @@ class TestGetMatchFn:
         """Test getting exact match function."""
         fn = get_match_fn(EXACT)
         assert fn is match_exact
-
-    def test_get_semantic_fn(self):
-        """Test getting semantic match function."""
-        fn = get_match_fn(SEMANTIC)
-        assert fn is match_semantic
-
-    def test_get_fuzzy_fn(self):
-        """Test getting fuzzy match function."""
-        fn = get_match_fn(FUZZY)
-        assert fn is match_fuzzy
 
     def test_invalid_mode(self):
         """Test getting function for invalid mode."""

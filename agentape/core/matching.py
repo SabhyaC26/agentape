@@ -61,3 +61,4 @@ def get_match_fn(mode: MatchMode) -> callable:
         return match_exact
     else:
         raise ValueError(f"Unknown match mode: {mode}")
+
