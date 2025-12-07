@@ -44,10 +44,10 @@ dev = [
 agentape = "agentape.pytest_plugin"
 
 [project.urls]
-Homepage = "https://github.com/agentape/agentape"
-Documentation = "https://github.com/agentape/agentape#readme"
-Repository = "https://github.com/agentape/agentape"
-Issues = "https://github.com/agentape/agentape/issues"
+Homepage = "https://github.com/SabhyaC26/agentape"
+Documentation = "https://github.com/SabhyaC26/agentape#readme"
+Repository = "https://github.com/SabhyaC26/agentape"
+Issues = "https://github.com/SabhyaC26/agentape/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["agentape"]
