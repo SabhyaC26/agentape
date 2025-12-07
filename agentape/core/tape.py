@@ -49,8 +49,13 @@ class Tape:
         request: dict[str, Any],
         response: Any,
         latency_ms: int | None = None,
+        provider: str | None = None,
     ) -> None:
         """Add a new interaction to the tape."""
+        # Set provider lazily on first interaction
+        if self.provider is None and provider is not None:
+            self.provider = provider
+        
         interaction = {
             "id": len(self.interactions) + 1,
             "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -66,8 +71,13 @@ class Tape:
         request: dict[str, Any],
         chunks: list[Any],
         latency_ms: int | None = None,
+        provider: str | None = None,
     ) -> None:
         """Add a streaming interaction to the tape."""
+        # Set provider lazily on first interaction
+        if self.provider is None and provider is not None:
+            self.provider = provider
+        
         serialized_chunks = []
         for chunk in chunks:
             if hasattr(chunk, "model_dump"):

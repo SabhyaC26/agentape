@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """Example demonstrating agentape record/replay functionality."""
 
+import os
 import agentape
 from openai import OpenAI
+from dotenv import load_dotenv
 
-# Note: This example requires an OpenAI API key set as OPENAI_API_KEY env var
+# Load environment variables from .env file
+load_dotenv()
+
+# Note: This example requires an OPENROUTER_API_KEY in your .env file
 
 
 def demo_basic_usage():
@@ -13,15 +18,20 @@ def demo_basic_usage():
     print("AgentTape Example: Basic Record/Replay")
     print("=" * 60)
 
-    # Step 1: Wrap the OpenAI client
-    client = agentape.wrap(OpenAI())
-    print("\n✓ Wrapped OpenAI client")
+    # Step 1: Wrap the OpenAI client configured for OpenRouter
+    client = agentape.wrap(
+        OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=os.environ.get("OPENROUTER_API_KEY"),
+        )
+    )
+    print("\n✓ Wrapped OpenAI client with OpenRouter")
 
     # Step 2: Record an interaction
     print("\n[RECORD MODE] Making API call and recording to tape...")
     with agentape.record("tapes/example.yaml"):
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="openai/gpt-oss-120b:free",
             messages=[{"role": "user", "content": "Say 'Hello from agentape!'"}],
         )
         recorded_content = response.choices[0].message.content
@@ -33,7 +43,7 @@ def demo_basic_usage():
     print("\n[REPLAY MODE] Loading cached response from tape...")
     with agentape.replay("tapes/example.yaml"):
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="openai/gpt-oss-120b:free",
             messages=[{"role": "user", "content": "Say 'Hello from agentape!'"}],
         )
         replayed_content = response.choices[0].message.content
@@ -54,13 +64,18 @@ def demo_streaming():
     print("AgentTape Example: Streaming Support")
     print("=" * 60)
 
-    client = agentape.wrap(OpenAI())
+    client = agentape.wrap(
+        OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=os.environ.get("OPENROUTER_API_KEY"),
+        )
+    )
 
     # Record streaming
     print("\n[RECORD MODE] Streaming API call...")
     with agentape.record("tapes/streaming_example.yaml"):
         stream = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="openai/gpt-oss-120b:free",
             messages=[{"role": "user", "content": "Count to 5"}],
             stream=True,
         )
@@ -101,6 +116,6 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"\n❌ Error: {e}")
         print(
-            "\nMake sure OPENAI_API_KEY is set in your environment for record mode."
+            "\nMake sure OPENROUTER_API_KEY is set in your environment for record mode."
         )
         print("Or use replay mode with existing tapes.")

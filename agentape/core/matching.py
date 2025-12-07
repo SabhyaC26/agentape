@@ -10,14 +10,10 @@ class MatchMode(Enum):
     """Matching modes for replay."""
 
     EXACT = "exact"
-    SEMANTIC = "semantic"
-    FUZZY = "fuzzy"
 
 
 # Convenience constants
 EXACT = MatchMode.EXACT
-SEMANTIC = MatchMode.SEMANTIC
-FUZZY = MatchMode.FUZZY
 
 # Fields to exclude from matching (non-deterministic or irrelevant)
 EXCLUDED_FIELDS = frozenset(

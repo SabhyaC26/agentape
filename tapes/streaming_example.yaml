@@ -1,0 +1,1207 @@
+version: '1.0'
+recorded_at: '2025-12-07T02:55:21.067012+00:00'
+provider: openai
+interactions:
+- id: 1
+  timestamp: '2025-12-07T02:55:22.749723+00:00'
+  request:
+    method: chat.completions.create
+    model: openai/gpt-oss-120b:free
+    messages:
+    - role: user
+      content: Count to 5
+    stream: true
+  response: {}
+  latency_ms: 1682
+  streaming_chunks:
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ''
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: The
+        reasoning_details:
+        - type: reasoning.text
+          text: The
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' user'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' user'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' asks'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' asks'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' "'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' "'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: Count
+        reasoning_details:
+        - type: reasoning.text
+          text: Count
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' to'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' to'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' '
+        reasoning_details:
+        - type: reasoning.text
+          text: ' '
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: '5'
+        reasoning_details:
+        - type: reasoning.text
+          text: '5'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: '".'
+        reasoning_details:
+        - type: reasoning.text
+          text: '".'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' Simple'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' Simple'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: .
+        reasoning_details:
+        - type: reasoning.text
+          text: .
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' Provide'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' Provide'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' counting'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' counting'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ':'
+        reasoning_details:
+        - type: reasoning.text
+          text: ':'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' '
+        reasoning_details:
+        - type: reasoning.text
+          text: ' '
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: '1'
+        reasoning_details:
+        - type: reasoning.text
+          text: '1'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ','
+        reasoning_details:
+        - type: reasoning.text
+          text: ','
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: '2'
+        reasoning_details:
+        - type: reasoning.text
+          text: '2'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ','
+        reasoning_details:
+        - type: reasoning.text
+          text: ','
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: '3'
+        reasoning_details:
+        - type: reasoning.text
+          text: '3'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ','
+        reasoning_details:
+        - type: reasoning.text
+          text: ','
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: '4'
+        reasoning_details:
+        - type: reasoning.text
+          text: '4'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ','
+        reasoning_details:
+        - type: reasoning.text
+          text: ','
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: '5'
+        reasoning_details:
+        - type: reasoning.text
+          text: '5'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: .
+        reasoning_details:
+        - type: reasoning.text
+          text: .
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' Probably'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' Probably'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' respond'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' respond'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' with'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' with'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' the'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' the'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: ' numbers'
+        reasoning_details:
+        - type: reasoning.text
+          text: ' numbers'
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: .
+        reasoning_details:
+        - type: reasoning.text
+          text: .
+          format: unknown
+          index: 0
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: '1'
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ','
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ' '
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: '2'
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ','
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ' '
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: '3'
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ','
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ' '
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: '4'
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ','
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ' '
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: '5'
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: .
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+        reasoning: null
+        reasoning_details: []
+      finish_reason: stop
+      index: 0
+      logprobs: null
+      native_finish_reason: stop
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage: null
+    provider: OpenInference
+  - id: gen-1765076121-vu5EQQf0p3IkotXwAqG3
+    choices:
+    - delta:
+        content: ''
+        function_call: null
+        refusal: null
+        role: assistant
+        tool_calls: null
+      finish_reason: null
+      index: 0
+      logprobs: null
+      native_finish_reason: null
+    created: 1765076121
+    model: openai/gpt-oss-120b:free
+    object: chat.completion.chunk
+    service_tier: null
+    system_fingerprint: null
+    usage:
+      completion_tokens: 55
+      prompt_tokens: 73
+      total_tokens: 128
+      completion_tokens_details:
+        accepted_prediction_tokens: null
+        audio_tokens: null
+        reasoning_tokens: 25
+        rejected_prediction_tokens: null
+        image_tokens: 0
+      prompt_tokens_details:
+        audio_tokens: 0
+        cached_tokens: 0
+        video_tokens: 0
+      cost: 0
+      is_byok: false
+      cost_details:
+        upstream_inference_cost: null
+        upstream_inference_prompt_cost: 0
+        upstream_inference_completions_cost: 0
+    provider: OpenInference

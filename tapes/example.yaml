@@ -1,0 +1,62 @@
+version: '1.0'
+recorded_at: '2025-12-07T02:55:19.628074+00:00'
+provider: openai
+interactions:
+- id: 1
+  timestamp: '2025-12-07T02:55:21.047586+00:00'
+  request:
+    method: chat.completions.create
+    model: openai/gpt-oss-120b:free
+    messages:
+    - role: user
+      content: Say 'Hello from agentape!'
+  response:
+    id: gen-1765076119-XkIV5H6OfSyPJpCqyqzA
+    choices:
+    - finish_reason: stop
+      index: 0
+      logprobs: null
+      message:
+        content: Hello from agentape!
+        refusal: null
+        role: assistant
+        annotations: null
+        audio: null
+        function_call: null
+        tool_calls: null
+        reasoning: 'The user asks: "Say ''Hello from agentape!''" So we just respond
+          with that phrase. No policy issues.'
+        reasoning_details:
+        - format: unknown
+          index: 0
+          type: reasoning.text
+          text: 'The user asks: "Say ''Hello from agentape!''" So we just respond
+            with that phrase. No policy issues.'
+      native_finish_reason: stop
+    created: 1765076120
+    model: openai/gpt-oss-120b:free
+    object: chat.completion
+    service_tier: null
+    system_fingerprint: null
+    usage:
+      completion_tokens: 40
+      prompt_tokens: 76
+      total_tokens: 116
+      completion_tokens_details:
+        accepted_prediction_tokens: null
+        audio_tokens: null
+        reasoning_tokens: 25
+        rejected_prediction_tokens: null
+        image_tokens: 0
+      prompt_tokens_details:
+        audio_tokens: 0
+        cached_tokens: 0
+        video_tokens: 0
+      cost: 0
+      is_byok: false
+      cost_details:
+        upstream_inference_cost: null
+        upstream_inference_prompt_cost: 0
+        upstream_inference_completions_cost: 0
+    provider: OpenInference
+  latency_ms: 1419

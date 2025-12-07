@@ -17,9 +17,10 @@ if TYPE_CHECKING:
 class WrappedCompletions:
     """Wrapper for OpenAI chat completions."""
 
-    def __init__(self, completions: Any, get_context: callable):
+    def __init__(self, completions: Any, get_context: callable, provider: str):
         self._completions = completions
         self._get_context = get_context
+        self._provider = provider
 
     def create(self, **kwargs) -> ChatCompletion | Iterator[ChatCompletionChunk]:
         """Create a chat completion, with recording/replay support."""
@@ -51,7 +52,7 @@ class WrappedCompletions:
         else:
             response = self._completions.create(**kwargs)
             latency_ms = int((time.time() - start_time) * 1000)
-            context.tape.add_interaction(request, response, latency_ms)
+            context.tape.add_interaction(request, response, latency_ms, provider=self._provider)
             return response
 
     def _record_streaming(
@@ -68,7 +69,7 @@ class WrappedCompletions:
             yield chunk
 
         latency_ms = int((time.time() - start_time) * 1000)
-        context.tape.add_streaming_interaction(request, chunks, latency_ms)
+        context.tape.add_streaming_interaction(request, chunks, latency_ms, provider=self._provider)
 
     def _replay_create(
         self, kwargs: dict[str, Any], is_streaming: bool
@@ -110,10 +111,10 @@ class WrappedCompletions:
 class WrappedChat:
     """Wrapper for OpenAI chat namespace."""
 
-    def __init__(self, chat: Any, get_context: callable):
+    def __init__(self, chat: Any, get_context: callable, provider: str):
         self._chat = chat
         self._get_context = get_context
-        self._completions = WrappedCompletions(chat.completions, get_context)
+        self._completions = WrappedCompletions(chat.completions, get_context, provider)
 
     @property
     def completions(self) -> WrappedCompletions:
@@ -126,7 +127,7 @@ class WrappedOpenAIClient(BaseWrappedClient):
 
     def __init__(self, client: OpenAI):
         super().__init__(client)
-        self._chat = WrappedChat(client.chat, self._get_context)
+        self._chat = WrappedChat(client.chat, self._get_context, self.provider)
 
     @property
     def provider(self) -> str:

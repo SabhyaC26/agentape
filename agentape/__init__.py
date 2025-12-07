@@ -20,7 +20,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any, TypeVar, overload
 
-from agentape.core.matching import EXACT, FUZZY, SEMANTIC, MatchMode
+from agentape.core.matching import EXACT, MatchMode
 from agentape.core.recorder import record
 from agentape.core.registry import register_client
 from agentape.core.replayer import replay
@@ -75,21 +75,13 @@ def wrap(client: Any) -> Any:
     if client_type == "OpenAI" and "openai" in client_module:
         from agentape.clients.openai_client import WrappedOpenAIClient
 
-        wrapped = WrappedOpenAIClient(client)
-        register_client(wrapped)
-        return wrapped
-
-    # Phase 2: Anthropic support
-    # if client_type == "Anthropic" and "anthropic" in client_module:
-    #     from agentape.clients.anthropic import WrappedAnthropicClient
-    #     wrapped = WrappedAnthropicClient(client)
-    #     register_client(wrapped)
-    #     return wrapped
+        wrapped_client = WrappedOpenAIClient(client)
+        register_client(wrapped_client)
+        return wrapped_client
 
     raise TypeError(
         f"Unsupported client type: {client_type}. "
         "Currently supported: OpenAI. "
-        "Anthropic support coming in Phase 2."
     )
 
 
@@ -101,8 +93,6 @@ __all__ = [
     "use_tape",
     # Matching modes
     "EXACT",
-    "SEMANTIC",
-    "FUZZY",
     "MatchMode",
     # Exceptions
     "AgentapeError",
