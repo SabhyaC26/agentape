@@ -1,6 +1,22 @@
-# agentape
+<p align="center">
+  <img src="agentapelogo.png" alt="agentape logo" width="300">
+</p>
 
-Record/replay testing for LLM agents.
+<p align="center">
+    <a href="https://pypi.org/project/agentape/">
+        <img src="https://img.shields.io/pypi/v/agentape.svg" alt="PyPI version">
+    </a>
+    <a href="https://pypi.org/project/agentape/">
+        <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python versions">
+    </a>
+    <a href="LICENSE">
+        <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
+    </a>
+</p>
+
+<p align="center">
+  <b>Record/replay testing for LLM agents.</b>
+</p>
 
 ## Installation
 
